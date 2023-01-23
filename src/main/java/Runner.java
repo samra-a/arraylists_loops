@@ -43,9 +43,47 @@ public class Runner {
         System.out.println("numbers: " + numbers);
 
 //        1. Print out a list of the even integers
+        for (int i = 0; i < numbers.size(); i++) {
+            if (numbers.get(i) % 2 == 0) {
+                System.out.println(numbers.get(i) + " ");
+            }
+        }
 //        2. Print the difference between the largest and smallest value
+        int min = numbers.get(0);
+        int max = numbers.get(0);
+
+        int n = numbers.size();
+
+        for (int i = 1; i < n; i++) {
+            if (numbers.get(i) < min) {
+                min = numbers.get(i);
+            }
+        }
+
+        for (int i = 1; i < n; i++) {
+            if (numbers.get(i) > max) {
+                max = numbers.get(i);
+            }
+        }
+
+        System.out.println(max - min);
+
 //        3. Print True if the list contains a 1 next to a 1 somewhere.
+
+       for (int i = 0; i < numbers.size(); i++) {
+           if (numbers.get(i) == 1 && numbers.get(i + 1) == 1) {
+                   System.out.println("True");
+               }
+           }
+
 //        4. Print the sum of the numbers,
+//        int sum = 0;
+//        for (int i: numbers) {
+//            sum += i;
+//        }
+//        return sum;
+//    }
+
 //        5. Print the sum of the numbers...
 //           ...except the number 13 is unlucky, so it does not count...
 //           ...and numbers that come immediately after a 13 also do not count.
