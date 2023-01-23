@@ -77,18 +77,33 @@ public class Runner {
            }
 
 //        4. Print the sum of the numbers,
-//        int sum = 0;
-//        for (int i: numbers) {
-//            sum += i;
-//        }
-//        return sum;
-//    }
+           int sum = 0;
+
+           for (int number : numbers){
+               sum += number;
+           }
+        System.out.println(sum);
+
 
 //        5. Print the sum of the numbers...
+
 //           ...except the number 13 is unlucky, so it does not count...
 //           ...and numbers that come immediately after a 13 also do not count.
 //
 //          So [2, 7, 13, 2] would have sum of 9.
+
+        int sum_2 = 0;
+
+            for (int i = 0; i < numbers.size(); i++) {
+               if (numbers.get(i) !=13) {
+                   sum_2 += numbers.get(i);
+            } else {
+                   break;
+               }
+        }
+        System.out.println(sum_2);
+
+
 
     }
 
